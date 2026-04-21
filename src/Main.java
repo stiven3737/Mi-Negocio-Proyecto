@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-// 1. CLASE ABSTRACTA (Herencia)
+// 1. esta es la clase abstracta o herencia.
 
 abstract class Usuario {
     protected int id;
@@ -13,11 +13,11 @@ abstract class Usuario {
         this.nombre = nombre;
     }
 
-    // Método que cada hijo usará a su manera
+    // este es el metodo que cada hijo hara a su manera o implementara.
     public abstract void mostrarDatos();
 }
 
-// 2. INTERFAZ (Contrato)
+// 2. esta es la interfaz o mas conocida como el contrato.
 // Obliga a que el sistema tenga estos métodos sí o sí.
 interface IOperaciones {
     void guardar(Usuario u);
@@ -25,7 +25,7 @@ interface IOperaciones {
     void listar();
 }
 
-// 3. CLASE HIJA (Especialización)
+// 3. esta es la clase hija.
 class Cliente extends Usuario {
     public Cliente(int id, String nombre) {
         super(id, nombre);
@@ -37,7 +37,7 @@ class Cliente extends Usuario {
     }
 }
 
-// 4. LÓGICA Y POLIMORFISMO
+// 4. esta yá seria la logica o el polimorfismo.
 class GestionNegocio implements IOperaciones {
     // Polimorfismo: Una lista de "Usuarios" que guarda "Clientes"
     private List<Usuario> db = new ArrayList<>();
@@ -56,7 +56,8 @@ class GestionNegocio implements IOperaciones {
     }
 }
 
-// 5. SIMULADOR DE FRONTEND (Menú)
+// 5. aca es donde se ejecuta el programa - es como decir un frontend o
+// simulador.
 public class Main {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
